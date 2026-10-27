@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "edusense-ai"
+version = "1.0.0"
+description = "Local classroom activity summaries for teacher reflection"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "streamlit==1.66.1",
+  "opencv-contrib-python==4.14.0.94",
+  "numpy==2.4.6",
+  "pandas==3.0.5",
+  "soundfile==0.13.1",
+  "reportlab==5.0.0",
+  "requests==2.34.2",
+]
+
+[tool.setuptools.packages.find]
+include = ["edusense*"]
