@@ -9,9 +9,9 @@ It is designed to support teacher judgment. It does not identify students, trans
 ## Presentation links
 
 - GitHub source: https://github.com/kartikk0211/edusense-ai
-- Hosted demo: deployment in progress
+- Live demo: https://kartikk0211.github.io/edusense-ai/
 
-The hosted demo uses generated scenarios only. The full webcam/video/audio workflow remains available in the local app and is not exposed through the public demo.
+The GitHub Pages demo is a static interactive page with generated scenarios only. The full webcam/video/audio workflow remains available in the local app and is not exposed through the public demo.
 ## What works
 
 | Area | Status | Current behavior |
@@ -24,7 +24,7 @@ The hosted demo uses generated scenarios only. The full webcam/video/audio workf
 | History | Implemented locally | Saving is explicit. The SQLite store keeps at most 50 aggregate session summaries. |
 | Exports | Implemented locally | CSV data and an in-memory PDF summary can be downloaded. |
 | Identity recognition | Not implemented | No face embeddings, student names, or identity matching are used. |
-| Hosted presentation demo | Prepared at `public_demo/app.py` | Synthetic scenarios only; no media capture or upload. |
+| Hosted presentation demo | GitHub Pages at `docs/index.html` | Synthetic scenarios only; no media capture or upload. |
 
 ## Architecture
 
@@ -78,7 +78,7 @@ Start the local dashboard from the project directory:
 python -m streamlit run app.py
 ~~~
 
-Open the local URL Streamlit prints in the terminal. The webcam option accesses the camera attached to the computer running the local app. For a hosted walkthrough, deploy public_demo/app.py; that entrypoint uses synthetic scenarios and does not accept real classroom media.
+Open the local URL Streamlit prints in the terminal. The webcam option accesses the camera attached to the computer running the local app. The public presentation demo is hosted from docs/index.html through GitHub Pages and uses synthetic scenarios only. The optional Streamlit sample demo can be run with: python -m streamlit run public_demo/app.py.
 
 For camera mode, select a camera index and set a maximum run duration. For video mode, upload a short clip. Audio can be omitted, uploaded, or recorded in the page. If supplied, an audio clip is aligned from the beginning of the video timeline; the app does not claim sample-accurate audio/video synchronization.
 

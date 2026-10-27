@@ -4,7 +4,7 @@ EduSense AI is designed for a local classroom demo. Its outputs are aggregate si
 
 ## Public hosted demo
 
-The presentation app in public_demo/app.py uses generated scenario values only. It has no webcam, microphone, or media-upload controls, and it does not save session history. Scenario and class-size controls are used to render synthetic charts and downloadable synthetic reports. No real student media is sent to the hosting service by this demo.
+The GitHub Pages demo in docs/index.html uses generated scenario values in the visitor’s browser. It has no webcam, microphone, or media-upload controls, and it does not save session history. Scenario and class-size controls render synthetic charts and downloadable synthetic CSV data. No real student media is sent to GitHub Pages by this demo.
 
 The separate app.py local workflow accepts local webcam/video/audio input. Keep real classroom media in that local workflow; do not put student media into public repositories, issues, or demo pages.
 ## Data flow
