@@ -2,10 +2,16 @@
 
 **Multimodal Attendance & Classroom Activity Assistant**
 
-EduSense AI is a local-first classroom tool for teacher reflection. It samples a webcam or a local video, optionally analyzes a short room-audio clip, and creates a session summary with anonymous presence counts and transparent signal measurements.
+EduSense AI includes a full local analysis app and a shareable hosted demo. The local app analyzes a webcam or video and optional room-audio clip on the computer running it. The hosted presentation demo uses generated scenarios only and has no camera, microphone, or media-upload controls.
 
 It is designed to support teacher judgment. It does not identify students, transcribe speech, infer emotions, grade learners, or evaluate teaching quality. Optional model suggestions use an Ollama instance on the same computer; the app never calls a cloud model.
 
+## Presentation links
+
+- GitHub source: https://github.com/kartikk0211/edusense-ai
+- Hosted demo: deployment in progress
+
+The hosted demo uses generated scenarios only. The full webcam/video/audio workflow remains available in the local app and is not exposed through the public demo.
 ## What works
 
 | Area | Status | Current behavior |
@@ -18,7 +24,7 @@ It is designed to support teacher judgment. It does not identify students, trans
 | History | Implemented locally | Saving is explicit. The SQLite store keeps at most 50 aggregate session summaries. |
 | Exports | Implemented locally | CSV data and an in-memory PDF summary can be downloaded. |
 | Identity recognition | Not implemented | No face embeddings, student names, or identity matching are used. |
-| Cloud deployment | Not included | The app is intended to run on the same computer as the webcam. |
+| Hosted presentation demo | Prepared at `public_demo/app.py` | Synthetic scenarios only; no media capture or upload. |
 
 ## Architecture
 
@@ -72,7 +78,7 @@ Start the local dashboard from the project directory:
 python -m streamlit run app.py
 ~~~
 
-Open the local URL Streamlit prints in the terminal. The webcam option accesses the camera attached to the computer running the app. A hosted deployment would access the server's camera, so this project is not configured for cloud hosting.
+Open the local URL Streamlit prints in the terminal. The webcam option accesses the camera attached to the computer running the local app. For a hosted walkthrough, deploy public_demo/app.py; that entrypoint uses synthetic scenarios and does not accept real classroom media.
 
 For camera mode, select a camera index and set a maximum run duration. For video mode, upload a short clip. Audio can be omitted, uploaded, or recorded in the page. If supplied, an audio clip is aligned from the beginning of the video timeline; the app does not claim sample-accurate audio/video synchronization.
 
@@ -131,4 +137,4 @@ tests/                   Offline behavior tests
 docs/                    Privacy and demo notes
 ~~~
 
-No license has been selected for this local project. Choose one before publishing or redistributing it.
+No license file is included. The repository is public for viewing; reuse rights remain subject to copyright unless a license is added.
