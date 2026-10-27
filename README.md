@@ -8,8 +8,8 @@ It is designed to support teacher judgment. It does not identify students, trans
 
 ## Presentation links
 
-- GitHub source: https://github.com/kartikk0211/edusense-ai
-- Live demo: https://kartikk0211.github.io/edusense-ai/
+- Project source and attribution: https://github.com/kartikk0211/edusense-ai
+- Live demo: https://jayesharya.github.io/Attendance-ai/
 
 The GitHub Pages demo is a static interactive page with generated scenarios only. The full webcam/video/audio workflow remains available in the local app and is not exposed through the public demo.
 ## What works
@@ -66,8 +66,8 @@ python -m pip install -r requirements.txt
 ~~~bash
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
+python3 -m pip install --upgrade pip
+python3 -m pip install -r requirements.txt
 ~~~
 
 ## Run
@@ -127,14 +127,14 @@ See docs/PRIVACY.md for data locations and limits.
 ~~~text
 app.py                  Streamlit dashboard
 edusense/tracking.py     Anonymous sustained-presence tracker
-edusense/vision.py       Local webcam/video sampling
-edusense/audio.py        One-second audio activity features
-edusense/analytics.py    Timestamp alignment and session summaries
+edusense/vision.py      Local webcam/video sampling
+edusense/audio.py       One-second audio activity features
+edusense/analytics.py   Timestamp alignment and session summaries
 edusense/recommendations.py
-edusense/storage.py      Local SQLite history
-edusense/reporting.py    In-memory PDF generation
-tests/                   Offline behavior tests
-docs/                    Privacy and demo notes
+edusense/storage.py     Local SQLite history
+edusense/reporting.py   In-memory PDF generation
+tests/                  Offline behavior tests
+docs/                   Privacy and demo notes
 ~~~
 
 No license file is included. The repository is public for viewing; reuse rights remain subject to copyright unless a license is added.
